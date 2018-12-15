@@ -10,7 +10,7 @@ var sassFiles = "scss/*.scss";
 
 gulp.task("sass", function(){ 
 		log("Generate CSS files " + (new Date()).toString());
-    gulp.src(sassFiles)
+    return gulp.src(sassFiles)
             .pipe(sass({ style: 'expanded' }))
             .pipe(gulp.dest("css"))
             .pipe(rename({suffix: '.min'}))
@@ -20,7 +20,7 @@ gulp.task("sass", function(){
 
 gulp.task("watch", function(){
     log("Watching scss files for modifications");
-    gulp.watch(sassFiles, ["sass"]);
+    return gulp.watch(sassFiles, gulp.series('sass'));
 });
 
-gulp.task("default", ["sass"]);
+gulp.task("default", gulp.series('sass'));
