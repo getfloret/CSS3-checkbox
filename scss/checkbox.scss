@@ -48,8 +48,8 @@ body {
 </div>
 */
 
-$ch-color: #424242;
-$ch-selected-color: #000000;
+$ch-color: #000000;
+$ch-selected-color: #e50914;
 $ch-disabled-color: #787878;
 
 .checkbox-btn,
@@ -145,7 +145,7 @@ $ch-disabled-color: #787878;
             top: 6px;
             left: 6px;
             @include border-radius(50%);
-            background-color: #000000;
+            background-color: $ch-selected-color;
             @include transform(rotate(0deg));
         }
     }
