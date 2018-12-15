@@ -1,0 +1,25 @@
+{
+  "name": "css3-checkbox",
+  "version": "1.0.0",
+  "description": "**What you will find here?**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getfloret/CSS3-checkbox.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/getfloret/CSS3-checkbox/issues"
+  },
+  "homepage": "https://github.com/getfloret/CSS3-checkbox#readme",
+  "dependencies": {
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-util": "^3.0.8"
+  }
+}
