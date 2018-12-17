@@ -64,7 +64,7 @@ $ch-disabled-color: #787878;
     }
     label {
         display: inline-block;
-        line-height: 24px; /* ::after height+borders */
+        line-height: 20px; /* ::after height+borders */
         vertical-align: middle;
         position: relative;
         padding-left: 20px;
@@ -80,7 +80,7 @@ $ch-disabled-color: #787878;
             top: 0;
             margin-left: -18px;
             background-color: white;
-            border: 3px solid $ch-color;
+            border: 1px solid $ch-color;
             @include border-radius(3px);
             cursor: pointer;
         }
@@ -89,10 +89,10 @@ $ch-disabled-color: #787878;
             content: "";
             width: 10px;
             height: 5px;
-            top: 6px;
-            left: 6px;
+            top: 5px;
+            left: 5px;
             margin-left: -18px;
-            border: 3px solid $ch-selected-color;
+            border: 1px solid $ch-selected-color;
             border-top: none;
             border-right: none;
             background: transparent;
@@ -113,7 +113,7 @@ $ch-disabled-color: #787878;
     input[type="radio"]:checked + label {
         color: $ch-selected-color;
         &::after {
-            border: 3px solid $ch-selected-color;
+            border: 1px solid $ch-selected-color;
         }
         &::before {
             opacity: 1;
@@ -124,7 +124,7 @@ $ch-disabled-color: #787878;
         color: $ch-disabled-color;
         cursor: default;
         &::after {
-            border: 3px solid $ch-disabled-color;
+            border: 1px solid $ch-disabled-color;
             background-color: #ffffff;
         }
         &::before {
@@ -142,11 +142,23 @@ $ch-disabled-color: #787878;
             width: 12px;
             height: 12px;
             border: none;
-            top: 6px;
-            left: 6px;
+            top: 4px;
+            left: 4px;
             @include border-radius(50%);
             background-color: $ch-selected-color;
             @include transform(rotate(0deg));
         }
     }
+}
+
+// https://stackoverflow.com/questions/31883972/how-can-i-remove-box-sizing-border-box-from-bootstrap-css
+.checkbox-btn *,
+.checkbox-btn *:before,
+.checkbox-btn *:after,
+.radio-btn *,
+.radio-btn *:before,
+.radio-btn *:after {
+    -webkit-box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;
 }
